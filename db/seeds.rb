@@ -24,6 +24,11 @@ c1 = Cocktail.create!(name: "Devil's kiss")
 c2 = Cocktail.create!(name: "Le mortier")
 c3 = Cocktail.create!(name: "Sex on the Manu")
 
+file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+c1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+c2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+c3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 Dose.destroy_all
 d1 = { description: "6 cl", ingredient: i1, cocktail: c1 }
 d2 = { description: "2 mg", ingredient: i2, cocktail: c1 }

@@ -1,11 +1,13 @@
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @cocktail.photo.key, height: 500, width: 400, crop: :fill %>')">
+  <div class="container">
+    <h1>Le <%= @cocktail.name %></h1>
+    <p>J'aimerais avoir son talent</p>
+  </div>
+</div>
 
 <div class="container pad20">
 
-  <!-- Heading -->
-  <h1 class="text-underline"> <%= @cocktail.name %> </h1>
-
   <!-- Image -->
-
   <!-- Ingredient heading -->
   <div class="pad10">
     <% if @cocktail.doses.empty? %>
